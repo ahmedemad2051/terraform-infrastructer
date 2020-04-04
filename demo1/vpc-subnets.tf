@@ -1,38 +1,38 @@
 resource "aws_subnet" "pub-sub-1" {
   vpc_id     = "${aws_vpc.custom-vpc.id}"
-  cidr_block = "10.0.1.0/24"
-  availability_zone = "us-west-1a"
+  cidr_block = "${var.pub_sub_1_cidr}"
+  availability_zone = "${var.pub_sub_1_zone}"
 
   tags = {
-    Name = "pub-sub-1"
+    Name = "${var.pub_sub_1_tag}"
   }
 }
 
 resource "aws_subnet" "pub-sub-2" {
   vpc_id     = "${aws_vpc.custom-vpc.id}"
-  cidr_block = "10.0.2.0/24"
-  availability_zone = "us-west-1b"
+  cidr_block = "${var.pub_sub_2_cidr}"
+  availability_zone = "${var.pub_sub_2_zone}"
 
   tags = {
-    Name = "pub-sub-2"
+    Name = "${var.pub_sub_2_tag}"
   }
 }
 
 resource "aws_subnet" "pv-sub-1" {
   vpc_id     = "${aws_vpc.custom-vpc.id}"
-  cidr_block = "10.0.3.0/24"
-  availability_zone = "us-west-1a"
+  cidr_block = "${var.pv_sub_1_cidr}"
+  availability_zone = "${var.pv_sub_1_zone}"
   tags = {
-    Name = "pv-sub-1"
+    Name = "${var.pv_sub_1_tag}"
   }
 }
 
 resource "aws_subnet" "pv-sub-2" {
   vpc_id     = "${aws_vpc.custom-vpc.id}"
-  cidr_block = "10.0.4.0/24"
-  availability_zone = "us-west-1b"
+  cidr_block = "${var.pv_sub_2_cidr}"
+  availability_zone = "${var.pv_sub_2_zone}"
 
   tags = {
-    Name = "pv-sub-2"
+    Name = "${var.pv_sub_2_tag}"
   }
 }
