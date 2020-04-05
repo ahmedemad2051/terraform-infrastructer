@@ -26,4 +26,4 @@ pv_sub_2_zone = "us-west-1b"
 pv_sub_2_tag = "pv-sub-2"
 
 ############# secrets manager ###############
-secret_manager = "keygen-ssh1"
+secret_manager = "keygen-ssh11"
